@@ -1,0 +1,15 @@
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\ClinicaMedicaConsole.exe
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\ClinicaMedicaConsole.deps.json
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\ClinicaMedicaConsole.runtimeconfig.json
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\ClinicaMedicaConsole.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\ClinicaMedicaConsole.pdb
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.AssemblyInfoInputs.cache
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.AssemblyInfo.cs
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.csproj.CoreCompileInputs.cache
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.sourcelink.json
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\refint\ClinicaMedicaConsole.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.pdb
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.genruntimeconfig.cache
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ref\ClinicaMedicaConsole.dll
