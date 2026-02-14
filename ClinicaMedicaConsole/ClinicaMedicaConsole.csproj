@@ -7,10 +7,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Modelos\" />
-      <Folder Include="Repositorios\" />
-      <Folder Include="Telas\" />
-    </ItemGroup>
-
 </Project>
