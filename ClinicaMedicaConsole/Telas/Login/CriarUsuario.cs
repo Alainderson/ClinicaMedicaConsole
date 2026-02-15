@@ -1,4 +1,9 @@
 ﻿using ClinicaMedicaConsole.Modelos;
+using ClinicaMedicaConsole.Repositorios;
+using System.Security.Cryptography;
+using System.Text;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+
 
 namespace ClinicaMedicaConsole.Telas.Login;
 
@@ -8,8 +13,6 @@ public class CriarUsuario
     
     public static void Load()
     {
-        Object _usuario;
-        
         Console.Clear();
         Console.WriteLine("Opção selecionada: Criar usuário");
         Console.WriteLine("---------------------------------");
@@ -18,13 +21,14 @@ public class CriarUsuario
         string nome = Console.ReadLine();
         Console.Write("Digite o email: ");
         string email = Console.ReadLine();
-        string senha = criaSenha(nome, email);
+        string senha = GerenciadorSenha.GerarHash(CriaSenha(nome, email));
         
+        Usuario usuario = new Usuario(){Nome = nome, Email = email, SenhaHash = senha};
 
-
+        Criar(usuario);
 
     }
-    public static string criaSenha(string nome , string email)
+    public static string CriaSenha(string nome , string email)
     {
         while (true)
         {
@@ -35,15 +39,16 @@ public class CriarUsuario
             if (senha != senhaCheck && senha.Length > 0)
             {
                 Console.Clear();
+                Console.WriteLine($"Nome: {nome}");
+                Console.WriteLine($"Email: {email}");
+                Console.WriteLine();
                 Console.WriteLine("Senha incorreta, tente novamente");
-                Console.Write($"Nome: {nome}");
-                Console.Write($"Email: {email}");
             }
             else
             {   
                 Console.Clear();
-                Console.Write($"Nome: {nome}");
-                Console.Write($"Email: {email}");
+                Console.WriteLine($"Nome: {nome}");
+                Console.WriteLine($"Email: {email}");
                 Console.WriteLine("Senha Correta");
                 return senha;
             }
@@ -53,6 +58,8 @@ public class CriarUsuario
 
     public static void Criar(Usuario usuario)
     {
+        var repositorio = new Repositorio<Usuario>(AcessoBanco.Conexao);
+        repositorio.Create(usuario);
         
     }
     

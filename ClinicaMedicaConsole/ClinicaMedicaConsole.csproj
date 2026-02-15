@@ -10,6 +10,7 @@
     <ItemGroup>
       <PackageReference Include="Dapper" Version="2.1.66" />
       <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+      <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="11.0.0-preview.1.26104.118" />
       <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0-preview3.25342.7" />
     </ItemGroup>
 

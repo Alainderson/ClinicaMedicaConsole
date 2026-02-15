@@ -1,12 +1,14 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
 namespace ClinicaMedicaConsole.Repositorios;
 
 public class Repositorio<T> where T : class
 {
-    private readonly SqlConnection _connection;
-    public Repositorio(SqlConnection connection) => _connection = connection;
-    public void Create(T model) => _connection.Insert<T>(model);
-    /*Testando */
+    private readonly SqlConnection _conexao;
+    public Repositorio(SqlConnection connection) => _conexao = connection;
+    public void Create(T model) => _conexao.Insert<T>(model);
+
+    
 }
