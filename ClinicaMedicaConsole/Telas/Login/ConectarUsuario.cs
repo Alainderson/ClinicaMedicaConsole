@@ -1,66 +1,81 @@
-﻿using ClinicaMedicaConsole.Modelos;
+﻿using System.Security.Cryptography.Pkcs;
+using ClinicaMedicaConsole.Modelos;
 using ClinicaMedicaConsole.Repositorios;
 using Dapper;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using Microsoft.Data.SqlClient;
 
 namespace ClinicaMedicaConsole.Telas.Login;
 
 public class ConectarUsuario
 {
+    public string _email { get; set; }
+    public string _senhaHash { get; set; }
     public static void Load()
     {
-        Console.WriteLine("Entre para acessar as funcionalidades do sistema:");
-        Console.WriteLine("Informe seu email");
-        string email =  Console.ReadLine();
-        Usuario usuario = Credenciais(email);
-        ConectarFinal(usuario);
-        Console.WriteLine("Usuário logado com sucesso");
-    }
-    
-    //retorna um objeto usuario utilizando o metodo buscarusuarioporemail
-    public static Usuario Credenciais(string email)
-    {
-        var usuario = BuscarUsuarioPorEmail(email);
-        
-        while (true)
+        Usuario usuarioBase = new Usuario();
+        Usuario usuarioLogando = new Usuario();
+     
+        for(var i = 3; i>0;i--)
         {
-            if(usuario == null)
+            MostrarCabecalho();
+            Console.WriteLine($"Tentativas restantes: {i}");
+            usuarioLogando = DadosUsuarioLogado();
+            usuarioBase = DadosUsuarioBase(usuarioLogando.Email);
+            if(usuarioBase != null)
             {
-                Console.Clear();
-                Console.WriteLine("Este email não existe em nosso sistema, insira um email válido.");
-                Console.WriteLine();
-                Console.WriteLine("Informe seu email");
-                email = Console.ReadLine();
-                usuario = BuscarUsuarioPorEmail(email);
-            } else
-            {
-                return usuario;
+                if(GerenciadorSenha.ValidarSenha(usuarioLogando.SenhaHash, usuarioBase.SenhaHash))
+                {
+                    Console.WriteLine("Usuário autenticado com sucesso! Clique para ir para o menu principal.");
+                    Console.ReadLine();
+                    MenuPrincipal.Load();
+                    break;
+                }
             }
-            
+
         }
-       
-    }
-    //Buscar na base algum registro com o email informado
-    public static Usuario BuscarUsuarioPorEmail(string email)
-    {
-        string consulta = "SELECT * FROM Usuarios WHERE [email] = @email"; 
-        Usuario usuario = AcessoBanco.Conexao.QuerySingleOrDefault<Usuario>(consulta, new { email });
-        return  usuario;
+        Console.WriteLine("Tentativas zeradas, clique em qualquer tecla para voltar para o menu principal.");
+        Console.ReadLine();
+        MenuLogin.Load();
+        
+      
+
     }
 
-    //Da match de senha informada com senha da base
-    public static void ConectarFinal( Usuario usuario)
-    { 
-        Console.WriteLine("Informe a senha:");
-        string senhaInformada = Console.ReadLine();
-        
-        
-        while (!GerenciadorSenha.ValidarSenha(senhaInformada,usuario.SenhaHash))
-        {
-            Console.WriteLine("Senha incorreta, tente novamente");
-            Console.WriteLine("Informe sua senha:");
-            senhaInformada = Console.ReadLine();
-        }
+    private static Usuario DadosUsuarioBase(string email)
+    {
+        var query = "SELECT * FROM [Usuarios] WHERE Email = @email" ;
+        SqlConnection conexao = AcessoBanco.Conexao;
+        Usuario usuarioBasel = conexao.Query<Usuario>(query, new { email = email}).FirstOrDefault();
+        return usuarioBasel;
     }
+
+    private static Usuario DadosUsuarioLogado()
+    {
+        
+        Console.WriteLine("Digite seu email:");
+        var email = Console.ReadLine();
+        Console.WriteLine("Digite seu senha:");
+        var senhaHash = Console.ReadLine();
+        Usuario user = new Usuario()
+        {
+            Email = email,
+            SenhaHash = senhaHash
+        };
+        return user;
+    }
+
+
+    public static void MostrarCabecalho()
+    {
+
+        Console.Clear();
+        Console.WriteLine("==============================");
+        Console.WriteLine("             LOGIN            ");
+        Console.WriteLine("==============================");
+        Console.WriteLine();
+
+    }
+    
     
 }

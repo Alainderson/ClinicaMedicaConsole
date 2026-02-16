@@ -67,3 +67,5 @@ C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaM.D9824CB2.Up2Date
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Figgle.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Figgle.Fonts.dll

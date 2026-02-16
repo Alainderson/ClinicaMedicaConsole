@@ -17,7 +17,7 @@ namespace ClinicaMedicaConsole
             {
                 MenuLogin.Load();    
             }
-            
+                
         }
     }
 }

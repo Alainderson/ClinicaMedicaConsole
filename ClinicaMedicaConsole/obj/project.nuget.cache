@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fmz/+c72JQM=",
+  "dgSpecHash": "E//eNkCFwYE=",
   "success": true,
   "projectFilePath": "C:\\Users\\alain\\RiderProjects\\ClinicaMedicaConsole\\ClinicaMedicaConsole\\ClinicaMedicaConsole.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\alain\\.nuget\\packages\\azure.identity\\1.16.0\\azure.identity.1.16.0.nupkg.sha512",
     "C:\\Users\\alain\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\alain\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
+    "C:\\Users\\alain\\.nuget\\packages\\figgle\\0.6.5\\figgle.0.6.5.nupkg.sha512",
+    "C:\\Users\\alain\\.nuget\\packages\\figgle.fonts\\0.6.5\\figgle.fonts.0.6.5.nupkg.sha512",
+    "C:\\Users\\alain\\.nuget\\packages\\figgle.generator\\0.6.5\\figgle.generator.0.6.5.nupkg.sha512",
     "C:\\Users\\alain\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\11.0.0-preview.1.26104.118\\microsoft.aspnetcore.cryptography.internal.11.0.0-preview.1.26104.118.nupkg.sha512",
     "C:\\Users\\alain\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\11.0.0-preview.1.26104.118\\microsoft.aspnetcore.cryptography.keyderivation.11.0.0-preview.1.26104.118.nupkg.sha512",
     "C:\\Users\\alain\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",

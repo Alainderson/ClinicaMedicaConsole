@@ -10,6 +10,8 @@
         "dependencies": {
           "Dapper": "2.1.66",
           "Dapper.Contrib": "2.0.78",
+          "Figgle": "0.6.5",
+          "Figgle.Fonts": "0.6.5",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "11.0.0-preview.1.26104.118",
           "Microsoft.Data.SqlClient": "7.0.0-preview3.25342.7"
         },
@@ -59,6 +61,25 @@
           "lib/net5.0/Dapper.Contrib.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.78.45418"
+          }
+        }
+      },
+      "Figgle/0.6.5": {
+        "runtime": {
+          "lib/netstandard2.0/Figgle.dll": {
+            "assemblyVersion": "0.6.5.0",
+            "fileVersion": "0.6.5.0"
+          }
+        }
+      },
+      "Figgle.Fonts/0.6.5": {
+        "dependencies": {
+          "Figgle": "0.6.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Figgle.Fonts.dll": {
+            "assemblyVersion": "0.6.5.0",
+            "fileVersion": "0.6.5.0"
           }
         }
       },
@@ -477,6 +498,20 @@
       "sha512": "sha512-sUfDVIf8LlHNiz3MfUFodeyRiemfN1JFkPxYjCxFWlwNPg1iQ49mB+0E89TkywWs4X8fiRWOVDQgtH5FtzK5Kw==",
       "path": "dapper.contrib/2.0.78",
       "hashPath": "dapper.contrib.2.0.78.nupkg.sha512"
+    },
+    "Figgle/0.6.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Z1qvgyDFvqeQB+b/qpp083N5O/1UNEVKpI2TsWD+tM7Ev388VccPysMxre6jeAy7h4m6L6LrguPGmnOh8+ZGA==",
+      "path": "figgle/0.6.5",
+      "hashPath": "figgle.0.6.5.nupkg.sha512"
+    },
+    "Figgle.Fonts/0.6.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AFGGUXBF/u44qOww7Zyro0pwhuq7uuZA68N/y1z6GHd+CRj6pWpGHMc7/+XyjZwgJFi3as4diEG/EULOmQAkPQ==",
+      "path": "figgle.fonts/0.6.5",
+      "hashPath": "figgle.fonts.0.6.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/11.0.0-preview.1.26104.118": {
       "type": "package",
