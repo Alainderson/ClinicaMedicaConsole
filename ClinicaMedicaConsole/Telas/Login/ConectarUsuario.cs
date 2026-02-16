@@ -9,50 +9,45 @@ namespace ClinicaMedicaConsole.Telas.Login;
 
 public class ConectarUsuario
 {
-    public string _email { get; set; }
-    public string _senhaHash { get; set; }
     public static void Load()
     {
-        Usuario usuarioBase = new Usuario();
-        Usuario usuarioLogando = new Usuario();
-     
-        for(var i = 3; i>0;i--)
+        Usuario usuarioBase;
+        Usuario usuarioLogando;
+
+        for (var i = 3; i > 0; i--)
         {
             MostrarCabecalho();
             Console.WriteLine($"Tentativas restantes: {i}");
             usuarioLogando = DadosUsuarioLogado();
             usuarioBase = DadosUsuarioBase(usuarioLogando.Email);
-            if(usuarioBase != null)
+            if (usuarioBase != null)
             {
-                if(GerenciadorSenha.ValidarSenha(usuarioLogando.SenhaHash, usuarioBase.SenhaHash))
+                if (GerenciadorSenha.ValidarSenha(usuarioLogando.SenhaHash, usuarioBase.SenhaHash))
                 {
                     Console.WriteLine("Usuário autenticado com sucesso! Clique para ir para o menu principal.");
                     Console.ReadLine();
                     MenuPrincipal.Load();
-                    break;
+                    return;
                 }
             }
-
         }
+
         Console.WriteLine("Tentativas zeradas, clique em qualquer tecla para voltar para o menu principal.");
         Console.ReadLine();
         MenuLogin.Load();
-        
-      
-
+        return;
     }
 
     private static Usuario DadosUsuarioBase(string email)
     {
-        var query = "SELECT * FROM [Usuarios] WHERE Email = @email" ;
+        var query = "SELECT TOP 1 FROM [Usuarios] WHERE Email = @email";
         SqlConnection conexao = AcessoBanco.Conexao;
-        Usuario usuarioBasel = conexao.Query<Usuario>(query, new { email = email}).FirstOrDefault();
+        Usuario usuarioBasel = conexao.Query<Usuario>(query, new { email = email }).FirstOrDefault();
         return usuarioBasel;
     }
 
     private static Usuario DadosUsuarioLogado()
     {
-        
         Console.WriteLine("Digite seu email:");
         var email = Console.ReadLine();
         Console.WriteLine("Digite seu senha:");
@@ -68,14 +63,10 @@ public class ConectarUsuario
 
     public static void MostrarCabecalho()
     {
-
         Console.Clear();
         Console.WriteLine("==============================");
         Console.WriteLine("             LOGIN            ");
         Console.WriteLine("==============================");
         Console.WriteLine();
-
     }
-    
-    
 }

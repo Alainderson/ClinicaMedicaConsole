@@ -8,6 +8,7 @@ public class MenuLogin
     {
         Load();
     }
+
     public static void Load()
     {
         MostrarCabecalho();
@@ -16,13 +17,11 @@ public class MenuLogin
 
     public static void MostrarCabecalho()
     {
-
         Console.Clear();
         Console.WriteLine("==============================");
         Console.WriteLine("        MENU DE LOGIN         ");
         Console.WriteLine("==============================");
         Console.WriteLine();
-
     }
 
     public static void MostrarOpcoes()
@@ -38,11 +37,10 @@ public class MenuLogin
 
         switch (opcao)
         {
-            case 1: CriarUsuario.Load();break;
-            case 2: ConectarUsuario.Load();break; 
-            case 0: Environment.Exit(0);break;
-            default: Load();break; 
+            case 1: CriarUsuario.Load(); break;
+            case 2: ConectarUsuario.Load(); break;
+            case 0: Environment.Exit(0); break;
+            default: Load(); break;
         }
     }
-    
 }

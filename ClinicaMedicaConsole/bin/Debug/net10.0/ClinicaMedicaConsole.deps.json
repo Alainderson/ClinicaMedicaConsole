@@ -12,6 +12,7 @@
           "Dapper.Contrib": "2.0.78",
           "Figgle": "0.6.5",
           "Figgle.Fonts": "0.6.5",
+          "MailKit": "4.15.0",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "11.0.0-preview.1.26104.118",
           "Microsoft.Data.SqlClient": "7.0.0-preview3.25342.7"
         },
@@ -42,6 +43,14 @@
           "lib/net8.0/Azure.Identity.dll": {
             "assemblyVersion": "1.16.0.0",
             "fileVersion": "1.1600.25.45906"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.6.2": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.6.2.46322"
           }
         }
       },
@@ -80,6 +89,17 @@
           "lib/netstandard2.0/Figgle.Fonts.dll": {
             "assemblyVersion": "0.6.5.0",
             "fileVersion": "0.6.5.0"
+          }
+        }
+      },
+      "MailKit/4.15.0": {
+        "dependencies": {
+          "MimeKit": "4.15.0"
+        },
+        "runtime": {
+          "lib/net10.0/MailKit.dll": {
+            "assemblyVersion": "4.15.0.0",
+            "fileVersion": "4.15.0.0"
           }
         }
       },
@@ -129,7 +149,7 @@
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.14.0",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Configuration.ConfigurationManager": "9.0.9",
-          "System.Security.Cryptography.Pkcs": "9.0.9"
+          "System.Security.Cryptography.Pkcs": "10.0.0"
         },
         "runtime": {
           "lib/net9.0/Microsoft.Data.SqlClient.dll": {
@@ -373,6 +393,18 @@
           }
         }
       },
+      "MimeKit/4.15.0": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.2",
+          "System.Security.Cryptography.Pkcs": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/MimeKit.dll": {
+            "assemblyVersion": "4.15.0.0",
+            "fileVersion": "4.15.0.0"
+          }
+        }
+      },
       "System.ClientModel/1.7.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
@@ -439,19 +471,19 @@
           }
         }
       },
-      "System.Security.Cryptography.Pkcs/9.0.9": {
+      "System.Security.Cryptography.Pkcs/10.0.0": {
         "runtime": {
-          "lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.925.41916"
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.925.41916"
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
@@ -485,6 +517,13 @@
       "path": "azure.identity/1.16.0",
       "hashPath": "azure.identity.1.16.0.nupkg.sha512"
     },
+    "BouncyCastle.Cryptography/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
+      "path": "bouncycastle.cryptography/2.6.2",
+      "hashPath": "bouncycastle.cryptography.2.6.2.nupkg.sha512"
+    },
     "Dapper/2.1.66": {
       "type": "package",
       "serviceable": true,
@@ -512,6 +551,13 @@
       "sha512": "sha512-AFGGUXBF/u44qOww7Zyro0pwhuq7uuZA68N/y1z6GHd+CRj6pWpGHMc7/+XyjZwgJFi3as4diEG/EULOmQAkPQ==",
       "path": "figgle.fonts/0.6.5",
       "hashPath": "figgle.fonts.0.6.5.nupkg.sha512"
+    },
+    "MailKit/4.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PM3bNDLwmK2hdiTx8xkTLRMRf9Y0VuirdyHWsrlSlz9hrME0lFkt/rF/9xlK/AtVML86BlS07pEPqo43Cmptbg==",
+      "path": "mailkit/4.15.0",
+      "hashPath": "mailkit.4.15.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/11.0.0-preview.1.26104.118": {
       "type": "package",
@@ -660,6 +706,13 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
+    "MimeKit/4.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+KVUJwHIp1aVPyVjcadAH1M9QkAwLflLujzySAS4N//AqSYjD+wMo2a3PkYu5XDibSuhlAg5sIh/DVNwVNGiVw==",
+      "path": "mimekit/4.15.0",
+      "hashPath": "mimekit.4.15.0.nupkg.sha512"
+    },
     "System.ClientModel/1.7.0": {
       "type": "package",
       "serviceable": true,
@@ -695,12 +748,12 @@
       "path": "system.memory.data/8.0.1",
       "hashPath": "system.memory.data.8.0.1.nupkg.sha512"
     },
-    "System.Security.Cryptography.Pkcs/9.0.9": {
+    "System.Security.Cryptography.Pkcs/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Y7/wY5lqrzJOu53yLFLPGaeKBcdWNw193udOFRB2joFDVpXLkmfPpfgks7dEIJYPIrW4k3onwR+4nQz6vIaaqA==",
-      "path": "system.security.cryptography.pkcs/9.0.9",
-      "hashPath": "system.security.cryptography.pkcs.9.0.9.nupkg.sha512"
+      "sha512": "sha512-UPWqLSygJlFerRi9XNIuM0a1VC8gHUIufyP24xQ0sc+XimqUAEcjpOz9DhKpyDjH+5B/wO3RpC0KpkEeDj/ddg==",
+      "path": "system.security.cryptography.pkcs/10.0.0",
+      "hashPath": "system.security.cryptography.pkcs.10.0.0.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/9.0.9": {
       "type": "package",

@@ -1,6 +1,4 @@
-﻿
-
-using ClinicaMedicaConsole.Telas.Consultas;
+﻿using ClinicaMedicaConsole.Telas.Consultas;
 using ClinicaMedicaConsole.Telas.Medicos;
 using ClinicaMedicaConsole.Telas.Pacientes;
 using ClinicaMedicaConsole.Telas.Prescricoes;
@@ -11,7 +9,7 @@ namespace ClinicaMedicaConsole.Telas;
 
 public class MenuPrincipal
 {
-    public static void Load( )
+    public static void Load()
     {
         Console.Clear();
         Console.WriteLine("=== Bem vindo(a) ao Projeto Clínica Médica ===");
@@ -23,7 +21,7 @@ public class MenuPrincipal
         Console.WriteLine("5 - Usuários  ");
         Console.WriteLine("6 - Relatórios  ");
         Console.WriteLine("0 - Pacientes  ");
-        
+
         short opcao = short.Parse(Console.ReadLine());
 
         switch (opcao)

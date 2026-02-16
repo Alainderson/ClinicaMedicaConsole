@@ -7,10 +7,8 @@ using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace ClinicaMedicaConsole.Telas.Login;
 
-
 public class CriarUsuario
 {
-    
     public static void Load()
     {
         Console.Clear();
@@ -22,13 +20,13 @@ public class CriarUsuario
         Console.Write("Digite o email: ");
         string email = Console.ReadLine();
         string senha = GerenciadorSenha.GerarHash(CriaSenha(nome, email));
-        
-        Usuario usuario = new Usuario(){Nome = nome, Email = email, SenhaHash = senha};
+
+        Usuario usuario = new Usuario() { Nome = nome, Email = email, SenhaHash = senha };
 
         Criar(usuario);
-
     }
-    public static string CriaSenha(string nome , string email)
+
+    public static string CriaSenha(string nome, string email)
     {
         while (true)
         {
@@ -45,7 +43,7 @@ public class CriarUsuario
                 Console.WriteLine("Senha incorreta, tente novamente");
             }
             else
-            {   
+            {
                 Console.Clear();
                 Console.WriteLine($"Nome: {nome}");
                 Console.WriteLine($"Email: {email}");
@@ -53,17 +51,11 @@ public class CriarUsuario
                 return senha;
             }
         }
-        
     }
 
     public static void Criar(Usuario usuario)
     {
         var repositorio = new Repositorio<Usuario>(AcessoBanco.Conexao);
         repositorio.Create(usuario);
-        
     }
-    
-  
-    
-    
 }

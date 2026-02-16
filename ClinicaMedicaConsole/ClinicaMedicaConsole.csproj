@@ -13,6 +13,7 @@
       <PackageReference Include="Figgle" Version="0.6.5" />
       <PackageReference Include="Figgle.Fonts" Version="0.6.5" />
       <PackageReference Include="Figgle.Generator" Version="0.6.5" />
+      <PackageReference Include="MailKit" Version="4.15.0" />
       <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="11.0.0-preview.1.26104.118" />
       <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0-preview3.25342.7" />
     </ItemGroup>

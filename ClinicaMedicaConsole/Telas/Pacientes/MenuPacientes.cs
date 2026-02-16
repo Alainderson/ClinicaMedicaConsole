@@ -12,13 +12,12 @@ public class MenuPacientes
         Console.WriteLine("4 - Editar paciente");
         Console.WriteLine("5 - Remover paciente");
         Console.WriteLine("0 - Voltar");
-        
+
         short option = short.Parse(Console.ReadLine());
 
         switch (option)
         {
             default: MenuPrincipal.Load(); break;
         }
-        
     }
 }

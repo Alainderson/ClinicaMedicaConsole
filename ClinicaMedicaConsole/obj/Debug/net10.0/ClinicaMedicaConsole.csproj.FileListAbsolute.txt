@@ -62,10 +62,13 @@ C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
-C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaMedicaConsole.csproj.AssemblyReference.cache
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\obj\Debug\net10.0\ClinicaM.D9824CB2.Up2Date
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Figgle.dll
 C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\Figgle.Fonts.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\BouncyCastle.Cryptography.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\MailKit.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\MimeKit.dll
+C:\Users\alain\RiderProjects\ClinicaMedicaConsole\ClinicaMedicaConsole\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll

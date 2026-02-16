@@ -1,4 +1,5 @@
 ﻿namespace ClinicaMedicaConsole;
+
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 

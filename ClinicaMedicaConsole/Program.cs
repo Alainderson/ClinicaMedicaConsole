@@ -1,23 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using ClinicaMedicaConsole;
-using ClinicaMedicaConsole.Telas;
+﻿using ClinicaMedicaConsole.Telas;
 using Microsoft.Data.SqlClient;
-using System;
 
 namespace ClinicaMedicaConsole
 {
     internal class Program
     {
-        private const string TextoConexao = "Server=localhost,1433;Database=ClinicaMedica ;User Id=sa;Password=Cl1nM3d@123;TrustServerCertificate=True;";
+        private const string TextoConexao =
+            "Server=localhost,1433;Database=ClinicaMedica ;User Id=sa;Password=Cl1nM3d@123;TrustServerCertificate=True;";
+
         static void Main(string[] args)
         {
             AcessoBanco.Conexao = new SqlConnection(TextoConexao);
             using (AcessoBanco.Conexao)
             {
-                MenuLogin.Load();    
+                MenuLogin.Load();
             }
-                
         }
     }
 }
